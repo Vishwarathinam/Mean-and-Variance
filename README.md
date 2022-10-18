@@ -1,16 +1,16 @@
-#  Mean and variance of a discrete  distribution
+###  Mean and variance of a discrete  distribution
 
 
-# Aim : 
+### Aim : 
 
 To find mean and variance of arrival of objects from the feeder using probability distribution
 
 
-# Software required :  
+### Software required :  
 
 Python and Visual components tool
 
-# Theory:
+### Theory:
 
 The expectation or the mean of a discrete random variable is a weighted average of all possible
 values of the random variable. The weights are the probabilities associated with the corresponding values. 
@@ -24,7 +24,7 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/192938695-99fedc01-34d5-4d36-84df-5880e766ed0c.png)
 
 
-# Procedure :
+### Procedure :
 
 1. Construct frequency distribution for the data
 
@@ -43,12 +43,37 @@ It shows the distance of a random variable from its mean. It is calcualted as
       ![image](https://user-images.githubusercontent.com/103921593/192942852-913550a9-fabe-4a55-b956-0487b18bbd97.png)
 
 
-# Experiment :
-
-
-# Program :
-
+### Experiment :
+![Screenshot (25)](https://user-images.githubusercontent.com/95266350/196346401-0e8cb978-9544-48e4-a544-3c7d82e39ab7.png)
 
 
 
-# Results and Output : 
+### Program :
+~~~
+import numpy as np
+L=[int(i) for i in input().split()]
+N=len(L); M=max(L) 
+x=list();f=list()
+for i in range (M+1):
+    c = 0
+    for j in range(N):
+        if L[j]==i:
+            c=c+1
+    f.append(c)
+    x.append(i)
+sf=np.sum(f)
+p=list()
+for i in range(M+1):
+    p.append(f[i]/sf) 
+mean=np.inner(x,p)
+EX2=np.inner(np.square(x),p)
+var=EX2-mean**2 
+SD=np.sqrt(var)
+print("The Mean arrival rate is %.3f "%mean)
+print("The Variance of arrival from feeder is %.3f "%var) 
+print("The Standard deviation of arrival from feeder is %.3F "%SD)
+~~~
+
+### Results and Output : 
+![Screenshot (27)](https://user-images.githubusercontent.com/95266350/196346580-3640b49b-eaed-49e0-a634-b0cf417d318f.png)
+
