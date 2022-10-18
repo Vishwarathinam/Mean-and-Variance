@@ -74,6 +74,6 @@ print("The Variance of arrival from feeder is %.3f "%var)
 print("The Standard deviation of arrival from feeder is %.3F "%SD)
 ~~~
 
-### Results and Output : 
+### Results and Output :  
 ![Screenshot (27)](https://user-images.githubusercontent.com/95266350/196346580-3640b49b-eaed-49e0-a634-b0cf417d318f.png)
 
